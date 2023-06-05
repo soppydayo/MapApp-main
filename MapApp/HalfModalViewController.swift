@@ -8,6 +8,15 @@
 import UIKit
 import MapKit
 
+class HalfModalViewController: UIViewController{
+    @IBOutlet var modalImage: UIImageView!
+    @IBOutlet var modalTitle:  UILabel!
+    @IBOutlet var modalText:  UILabel!
+   
+    
+    
+}
+
 class CustumMKAnnotationView: MKAnnotationView {
     let postData: PostData
     var title: String

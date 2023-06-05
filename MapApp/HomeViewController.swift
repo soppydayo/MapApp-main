@@ -10,7 +10,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     var isFirstLoad = true // 画面が初回ロードされたかのフラグ
     
     
-    // ピンがタップ
+    // ピンがタップされた時
         func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
             performSegue(withIdentifier: "toDetail", sender: nil)
         }

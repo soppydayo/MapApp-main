@@ -21,11 +21,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="526"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSQ-fJ-lgo">
+                                <rect key="frame" x="68" y="555" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pSA-c0-Hmv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="IFq-OY-wZN"/>
+                    <connections>
+                        <outlet property="modalImage" destination="OEa-ik-ZT1" id="oN6-v5-nbC"/>
+                        <outlet property="modalText" destination="oSQ-fJ-lgo" id="JuG-90-Gyj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8QJ-5P-sDG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,9 +78,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Mo-Lo-MbM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="he9-un-8Q3">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" red="0.94117647410000005" green="0.87843137979999997" blue="0.86274516580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="he9-un-8Q3" secondAttribute="height" multiplier="393:658" constant="-4.7781155015197783" id="GJZ-JG-18w"/>
+                                </constraints>
+                                <color key="separatorColor" red="0.84705877299999999" green="0.44313728810000003" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.94117647410000005" green="0.87843137979999997" blue="0.86274516580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Mo-Lo-MbM">
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94117647410000005" green="0.87843137979999997" blue="0.86274516580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="barTintColor" red="0.94117647410000005" green="0.87843137979999997" blue="0.86274516580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <textAttributes key="titleTextAttributes">
@@ -79,20 +98,20 @@
                                     <navigationItem title="登録したスポット" id="7uT-63-bhG"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="he9-un-8Q3">
-                                <rect key="frame" x="0.0" y="111" width="393" height="658"/>
-                                <color key="backgroundColor" red="0.94117647410000005" green="0.87843137979999997" blue="0.86274516580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="separatorColor" red="0.84705877299999999" green="0.44313728810000003" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="sectionIndexBackgroundColor" red="0.94117647410000005" green="0.87843137979999997" blue="0.86274516580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Kg-uu-keg"/>
                         <color key="backgroundColor" red="0.94117647410000005" green="0.88235294819999999" blue="0.86274516580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="he9-un-8Q3" firstAttribute="leading" secondItem="1Kg-uu-keg" secondAttribute="leading" id="H73-cM-PQs"/>
                             <constraint firstItem="he9-un-8Q3" firstAttribute="bottom" secondItem="1Kg-uu-keg" secondAttribute="bottom" id="HI3-2a-0Q4"/>
+                            <constraint firstItem="he9-un-8Q3" firstAttribute="top" secondItem="1Mo-Lo-MbM" secondAttribute="bottom" id="JGG-gB-iQu"/>
                             <constraint firstItem="he9-un-8Q3" firstAttribute="leading" secondItem="1Kg-uu-keg" secondAttribute="leading" id="Mex-nA-g25"/>
+                            <constraint firstItem="he9-un-8Q3" firstAttribute="bottom" secondItem="1Kg-uu-keg" secondAttribute="bottom" id="Ocz-pa-Wyd"/>
+                            <constraint firstItem="1Mo-Lo-MbM" firstAttribute="trailing" secondItem="he9-un-8Q3" secondAttribute="trailing" id="Rxq-ZJ-Q4q"/>
+                            <constraint firstItem="he9-un-8Q3" firstAttribute="trailing" secondItem="1Kg-uu-keg" secondAttribute="trailing" id="TjJ-L5-uhi"/>
                             <constraint firstItem="he9-un-8Q3" firstAttribute="trailing" secondItem="1Kg-uu-keg" secondAttribute="trailing" id="aCV-N7-5JA"/>
-                            <constraint firstItem="he9-un-8Q3" firstAttribute="top" secondItem="1Kg-uu-keg" secondAttribute="top" constant="52" id="bGK-8h-yTt"/>
+                            <constraint firstItem="he9-un-8Q3" firstAttribute="top" secondItem="1Kg-uu-keg" secondAttribute="top" constant="44" id="bGK-8h-yTt"/>
+                            <constraint firstItem="1Mo-Lo-MbM" firstAttribute="leading" secondItem="he9-un-8Q3" secondAttribute="leading" id="h8j-Nh-BkP"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="INDEX" image="folder" catalog="system" selectedImage="folder" id="893-BT-4Yg"/>
@@ -145,7 +164,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZQ-hI-YVp">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZQ-hI-YVp">
                                 <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
@@ -188,7 +207,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="MWb-bn-Kqs">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="MWb-bn-Kqs">
                                 <rect key="frame" x="37" y="118" width="319" height="466"/>
                             </imageView>
                         </subviews>
