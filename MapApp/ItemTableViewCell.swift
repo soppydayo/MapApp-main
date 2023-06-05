@@ -35,6 +35,21 @@ class ItemTableViewCell: UITableViewCell {
         dateLabel.text = date
         postImageView.image = image
     }
+    
+    // Padding for cell
+        func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+            return 8
+        }
+        
+        func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+            let marginView = UIView()
+            marginView.backgroundColor = .clear
+            return marginView
+        }
+        
+        func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+            return .leastNonzeroMagnitude
+        }
 
     
 }

@@ -17,7 +17,7 @@ class HalfModalViewController: UIViewController{
     
 }
 
-class CustumMKAnnotationView: MKAnnotationView {
+class CustomMKAnnotationView: MKAnnotationView {
     let postData: PostData
     var title: String
     var text: String

@@ -26,8 +26,12 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
             }
             
                 }
+        // ここでカスタムクラスに変換
+          guard let annotation = view as? CustomMKAnnotation else { return }
+          print(annotation.customProperty)  // ここでカスタムプロパティを取得します。
                 
             }
+        
         
                 
                 
@@ -76,21 +80,15 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         isMapDelegateSet = false
     }
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if annotation is MKUserLocation {
-          // 現在位置のピンはデフォルトのビューを使用する
-          return nil
-        }
-        let identifier = "PinAnnotation"
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
-        if annotationView == nil {
-          annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-          annotationView?.canShowCallout = true
-        }
-          return annotationView
-      }
+    
+    
+    
 
-
+    
+    
+    
+    
+    
         // 位置情報の利用許可が変更された時に呼ばれるメソッド
         func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
             switch status {
@@ -143,3 +141,21 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         
         
     }
+
+extension HalfModalViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            // 現在位置のピンはデフォルトのビューを使用する
+            return nil
+        }
+        let identifier = "CustomMKAnnotation"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
+        if annotationView == nil {
+            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+        }
+        return annotationView
+    }
+    
+}
