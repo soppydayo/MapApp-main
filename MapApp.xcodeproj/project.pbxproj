@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		706797CC2A19F1D1002A7235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706797CB2A19F1D1002A7235 /* AppDelegate.swift */; };
+		706797CE2A19F1D1002A7235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706797CD2A19F1D1002A7235 /* SceneDelegate.swift */; };
+		706797D02A19F1D1002A7235 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706797CF2A19F1D1002A7235 /* HomeViewController.swift */; };
+		706797D32A19F1D1002A7235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706797D12A19F1D1002A7235 /* Main.storyboard */; };
+		706797D52A19F1D3002A7235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706797D42A19F1D3002A7235 /* Assets.xcassets */; };
+		706797D82A19F1D3002A7235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706797D62A19F1D3002A7235 /* LaunchScreen.storyboard */; };
+		706797E02A1A65BD002A7235 /* presentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706797DF2A1A65BD002A7235 /* presentPickerViewController.swift */; };
+		706797E62A1A66D4002A7235 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706797E52A1A66D4002A7235 /* IndexViewController.swift */; };
+		706797E82A1A66EA002A7235 /* QuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706797E72A1A66EA002A7235 /* QuestViewController.swift */; };
+		706797EB2A1C54EC002A7235 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 706797EA2A1C54EC002A7235 /* Realm */; };
+		706797ED2A1C54EC002A7235 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 706797EC2A1C54EC002A7235 /* RealmSwift */; };
+		706797F12A1C90F1002A7235 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706797F02A1C90F1002A7235 /* PostData.swift */; };
+		706797F42A1D9F2D002A7235 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706797F22A1D9F2D002A7235 /* ItemTableViewCell.swift */; };
+		706797F52A1D9F2E002A7235 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706797F32A1D9F2D002A7235 /* ItemTableViewCell.xib */; };
+		706798032A1DA4E8002A7235 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 706797F72A1DA4E8002A7235 /* Roboto-ThinItalic.ttf */; };
+		706798042A1DA4E8002A7235 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 706797F82A1DA4E8002A7235 /* Roboto-Italic.ttf */; };
+		706798052A1DA4E8002A7235 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 706797F92A1DA4E8002A7235 /* Roboto-BlackItalic.ttf */; };
+		706798062A1DA4E8002A7235 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 706797FA2A1DA4E8002A7235 /* Roboto-MediumItalic.ttf */; };
+		706798072A1DA4E8002A7235 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 706797FB2A1DA4E8002A7235 /* Roboto-Black.ttf */; };
+		706798082A1DA4E8002A7235 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 706797FC2A1DA4E8002A7235 /* Roboto-Medium.ttf */; };
+		706798092A1DA4E8002A7235 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 706797FD2A1DA4E8002A7235 /* Roboto-Regular.ttf */; };
+		7067980A2A1DA4E8002A7235 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 706797FE2A1DA4E8002A7235 /* Roboto-Thin.ttf */; };
+		7067980B2A1DA4E8002A7235 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 706797FF2A1DA4E8002A7235 /* Roboto-LightItalic.ttf */; };
+		7067980C2A1DA4E8002A7235 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 706798002A1DA4E8002A7235 /* Roboto-Bold.ttf */; };
+		7067980D2A1DA4E8002A7235 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 706798012A1DA4E8002A7235 /* Roboto-BoldItalic.ttf */; };
+		7067980E2A1DA4E8002A7235 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 706798022A1DA4E8002A7235 /* Roboto-Light.ttf */; };
+		70D42BA32A2C518000B2B87C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D42BA22A2C518000B2B87C /* DetailViewController.swift */; };
+		70D42BA72A2C7B0D00B2B87C /* HalfModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D42BA62A2C7B0D00B2B87C /* HalfModalViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		706797C82A19F1D1002A7235 /* MapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		706797CB2A19F1D1002A7235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		706797CD2A19F1D1002A7235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		706797CF2A19F1D1002A7235 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		706797D22A19F1D1002A7235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		706797D42A19F1D3002A7235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		706797D72A19F1D3002A7235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		706797D92A19F1D3002A7235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		706797DF2A1A65BD002A7235 /* presentPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentPickerViewController.swift; sourceTree = "<group>"; };
+		706797E52A1A66D4002A7235 /* IndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexViewController.swift; sourceTree = "<group>"; };
+		706797E72A1A66EA002A7235 /* QuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestViewController.swift; sourceTree = "<group>"; };
+		706797F02A1C90F1002A7235 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		706797F22A1D9F2D002A7235 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		706797F32A1D9F2D002A7235 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
+		706797F72A1DA4E8002A7235 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		706797F82A1DA4E8002A7235 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		706797F92A1DA4E8002A7235 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		706797FA2A1DA4E8002A7235 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		706797FB2A1DA4E8002A7235 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		706797FC2A1DA4E8002A7235 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		706797FD2A1DA4E8002A7235 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		706797FE2A1DA4E8002A7235 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		706797FF2A1DA4E8002A7235 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		706798002A1DA4E8002A7235 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		706798012A1DA4E8002A7235 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		706798022A1DA4E8002A7235 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		70D42BA22A2C518000B2B87C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		70D42BA62A2C7B0D00B2B87C /* HalfModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		706797C52A19F1D1002A7235 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				706797ED2A1C54EC002A7235 /* RealmSwift in Frameworks */,
+				706797EB2A1C54EC002A7235 /* Realm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		706797BF2A19F1D1002A7235 = {
+			isa = PBXGroup;
+			children = (
+				706797CA2A19F1D1002A7235 /* MapApp */,
+				706797C92A19F1D1002A7235 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		706797C92A19F1D1002A7235 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				706797C82A19F1D1002A7235 /* MapApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		706797CA2A19F1D1002A7235 /* MapApp */ = {
+			isa = PBXGroup;
+			children = (
+				706797F62A1DA472002A7235 /* font */,
+				706797CB2A19F1D1002A7235 /* AppDelegate.swift */,
+				706797CD2A19F1D1002A7235 /* SceneDelegate.swift */,
+				706797CF2A19F1D1002A7235 /* HomeViewController.swift */,
+				706797DF2A1A65BD002A7235 /* presentPickerViewController.swift */,
+				706797E52A1A66D4002A7235 /* IndexViewController.swift */,
+				706797E72A1A66EA002A7235 /* QuestViewController.swift */,
+				706797F02A1C90F1002A7235 /* PostData.swift */,
+				70D42BA22A2C518000B2B87C /* DetailViewController.swift */,
+				706797D12A19F1D1002A7235 /* Main.storyboard */,
+				706797D42A19F1D3002A7235 /* Assets.xcassets */,
+				706797D62A19F1D3002A7235 /* LaunchScreen.storyboard */,
+				706797D92A19F1D3002A7235 /* Info.plist */,
+				706797F22A1D9F2D002A7235 /* ItemTableViewCell.swift */,
+				706797F32A1D9F2D002A7235 /* ItemTableViewCell.xib */,
+				70D42BA62A2C7B0D00B2B87C /* HalfModalViewController.swift */,
+			);
+			path = MapApp;
+			sourceTree = "<group>";
+		};
+		706797F62A1DA472002A7235 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				706797FB2A1DA4E8002A7235 /* Roboto-Black.ttf */,
+				706797F92A1DA4E8002A7235 /* Roboto-BlackItalic.ttf */,
+				706798002A1DA4E8002A7235 /* Roboto-Bold.ttf */,
+				706798012A1DA4E8002A7235 /* Roboto-BoldItalic.ttf */,
+				706797F82A1DA4E8002A7235 /* Roboto-Italic.ttf */,
+				706798022A1DA4E8002A7235 /* Roboto-Light.ttf */,
+				706797FF2A1DA4E8002A7235 /* Roboto-LightItalic.ttf */,
+				706797FC2A1DA4E8002A7235 /* Roboto-Medium.ttf */,
+				706797FA2A1DA4E8002A7235 /* Roboto-MediumItalic.ttf */,
+				706797FD2A1DA4E8002A7235 /* Roboto-Regular.ttf */,
+				706797FE2A1DA4E8002A7235 /* Roboto-Thin.ttf */,
+				706797F72A1DA4E8002A7235 /* Roboto-ThinItalic.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		706797C72A19F1D1002A7235 /* MapApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 706797DC2A19F1D3002A7235 /* Build configuration list for PBXNativeTarget "MapApp" */;
+			buildPhases = (
+				706797C42A19F1D1002A7235 /* Sources */,
+				706797C52A19F1D1002A7235 /* Frameworks */,
+				706797C62A19F1D1002A7235 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapApp;
+			packageProductDependencies = (
+				706797EA2A1C54EC002A7235 /* Realm */,
+				706797EC2A1C54EC002A7235 /* RealmSwift */,
+			);
+			productName = MapApp;
+			productReference = 706797C82A19F1D1002A7235 /* MapApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		706797C02A19F1D1002A7235 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					706797C72A19F1D1002A7235 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 706797C32A19F1D1002A7235 /* Build configuration list for PBXProject "MapApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 706797BF2A19F1D1002A7235;
+			packageReferences = (
+				706797E92A1C54EC002A7235 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
+			productRefGroup = 706797C92A19F1D1002A7235 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				706797C72A19F1D1002A7235 /* MapApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		706797C62A19F1D1002A7235 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7067980C2A1DA4E8002A7235 /* Roboto-Bold.ttf in Resources */,
+				706798082A1DA4E8002A7235 /* Roboto-Medium.ttf in Resources */,
+				706798092A1DA4E8002A7235 /* Roboto-Regular.ttf in Resources */,
+				7067980D2A1DA4E8002A7235 /* Roboto-BoldItalic.ttf in Resources */,
+				706798032A1DA4E8002A7235 /* Roboto-ThinItalic.ttf in Resources */,
+				706798042A1DA4E8002A7235 /* Roboto-Italic.ttf in Resources */,
+				7067980E2A1DA4E8002A7235 /* Roboto-Light.ttf in Resources */,
+				7067980B2A1DA4E8002A7235 /* Roboto-LightItalic.ttf in Resources */,
+				706797F52A1D9F2E002A7235 /* ItemTableViewCell.xib in Resources */,
+				706798052A1DA4E8002A7235 /* Roboto-BlackItalic.ttf in Resources */,
+				706798062A1DA4E8002A7235 /* Roboto-MediumItalic.ttf in Resources */,
+				706798072A1DA4E8002A7235 /* Roboto-Black.ttf in Resources */,
+				7067980A2A1DA4E8002A7235 /* Roboto-Thin.ttf in Resources */,
+				706797D82A19F1D3002A7235 /* LaunchScreen.storyboard in Resources */,
+				706797D52A19F1D3002A7235 /* Assets.xcassets in Resources */,
+				706797D32A19F1D1002A7235 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		706797C42A19F1D1002A7235 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70D42BA32A2C518000B2B87C /* DetailViewController.swift in Sources */,
+				706797D02A19F1D1002A7235 /* HomeViewController.swift in Sources */,
+				706797F42A1D9F2D002A7235 /* ItemTableViewCell.swift in Sources */,
+				706797F12A1C90F1002A7235 /* PostData.swift in Sources */,
+				706797CC2A19F1D1002A7235 /* AppDelegate.swift in Sources */,
+				70D42BA72A2C7B0D00B2B87C /* HalfModalViewController.swift in Sources */,
+				706797E02A1A65BD002A7235 /* presentPickerViewController.swift in Sources */,
+				706797E82A1A66EA002A7235 /* QuestViewController.swift in Sources */,
+				706797E62A1A66D4002A7235 /* IndexViewController.swift in Sources */,
+				706797CE2A19F1D1002A7235 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		706797D12A19F1D1002A7235 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				706797D22A19F1D1002A7235 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		706797D62A19F1D3002A7235 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				706797D72A19F1D3002A7235 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		706797DA2A19F1D3002A7235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		706797DB2A19F1D3002A7235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		706797DD2A19F1D3002A7235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GG7MDJCQ59;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MapApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "アプリ内で編集する写真を撮るためにカメラを起動します";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "このアプリは位置情報を取得します";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "このアプリは位置情報を取得します";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "編集した画像をフォトライブラリに保存";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アプリ内で編集する画像をフォトライブラリに保存します";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.shirakawa.soppy.MapApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		706797DE2A19F1D3002A7235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GG7MDJCQ59;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MapApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "アプリ内で編集する写真を撮るためにカメラを起動します";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "このアプリは位置情報を取得します";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "このアプリは位置情報を取得します";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "編集した画像をフォトライブラリに保存";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "アプリ内で編集する画像をフォトライブラリに保存します";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.shirakawa.soppy.MapApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		706797C32A19F1D1002A7235 /* Build configuration list for PBXProject "MapApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				706797DA2A19F1D3002A7235 /* Debug */,
+				706797DB2A19F1D3002A7235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		706797DC2A19F1D3002A7235 /* Build configuration list for PBXNativeTarget "MapApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				706797DD2A19F1D3002A7235 /* Debug */,
+				706797DE2A19F1D3002A7235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		706797E92A1C54EC002A7235 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		706797EA2A1C54EC002A7235 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 706797E92A1C54EC002A7235 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		706797EC2A1C54EC002A7235 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 706797E92A1C54EC002A7235 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 706797C02A19F1D1002A7235 /* Project object */;
+}
