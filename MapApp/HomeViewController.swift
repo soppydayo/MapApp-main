@@ -19,7 +19,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         if segue.identifier == "toDetail" {
             let next = segue.destination
             if let sheet = next.sheetPresentationController {
-                sheet.detents = [.medium(), .large()]
+                sheet.detents = [.medium()]
                 sheet.largestUndimmedDetentIdentifier = .medium
                 sheet.preferredCornerRadius = 40.0
                 sheet.prefersGrabberVisible = true
