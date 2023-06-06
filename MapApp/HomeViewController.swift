@@ -14,7 +14,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
-            let postData = sender
+            guard let postData = sender as? PostData else { return }
             let next = segue.destination
             if let sheet = next.sheetPresentationController {
                 sheet.detents = [.medium()]
@@ -23,8 +23,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
                 sheet.prefersGrabberVisible = true
             }
             
-            let HalfModalviewcontroller = UIViewController()
-                 HalfModalviewcontroller.postData = postData
+            let ViewController = UIViewController()
+                 ViewController.postData = postData
         }
         // ここでカスタムクラスに変換
            guard let annotation = view as? CustomAnnotationView else { return }
