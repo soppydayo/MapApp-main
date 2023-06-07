@@ -16,11 +16,10 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         if segue.identifier == "toDetail" {
             guard let annotation = sender as? CustomMKPointAnnotation else { return }
             let next = segue.destination as! HalfModalViewController
-           
-            
+            next.annotation = annotation  // データを渡す
             
             if let sheet = next.sheetPresentationController {
-                sheet.detents = [.medium(), .large()]
+                sheet.detents = [.medium()]
                 sheet.largestUndimmedDetentIdentifier = .medium
                 sheet.preferredCornerRadius = 40.0
                 sheet.prefersGrabberVisible = true
