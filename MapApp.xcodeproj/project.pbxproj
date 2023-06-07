@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70035FF02A30C7B400EB5164 /* QuestFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70035FEF2A30C7B400EB5164 /* QuestFolder.swift */; };
 		706797CC2A19F1D1002A7235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706797CB2A19F1D1002A7235 /* AppDelegate.swift */; };
 		706797CE2A19F1D1002A7235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706797CD2A19F1D1002A7235 /* SceneDelegate.swift */; };
 		706797D02A19F1D1002A7235 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706797CF2A19F1D1002A7235 /* HomeViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70035FEF2A30C7B400EB5164 /* QuestFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestFolder.swift; sourceTree = "<group>"; };
 		706797C82A19F1D1002A7235 /* MapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		706797CB2A19F1D1002A7235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		706797CD2A19F1D1002A7235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,7 +108,6 @@
 				706797CF2A19F1D1002A7235 /* HomeViewController.swift */,
 				706797DF2A1A65BD002A7235 /* presentPickerViewController.swift */,
 				706797E52A1A66D4002A7235 /* IndexViewController.swift */,
-				706797E72A1A66EA002A7235 /* QuestViewController.swift */,
 				706797F02A1C90F1002A7235 /* PostData.swift */,
 				70D42BA22A2C518000B2B87C /* DetailViewController.swift */,
 				706797D12A19F1D1002A7235 /* Main.storyboard */,
@@ -116,6 +117,8 @@
 				706797F22A1D9F2D002A7235 /* ItemTableViewCell.swift */,
 				706797F32A1D9F2D002A7235 /* ItemTableViewCell.xib */,
 				70D42BA62A2C7B0D00B2B87C /* HalfModalViewController.swift */,
+				706797E72A1A66EA002A7235 /* QuestViewController.swift */,
+				70035FEF2A30C7B400EB5164 /* QuestFolder.swift */,
 			);
 			path = MapApp;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				706797E02A1A65BD002A7235 /* presentPickerViewController.swift in Sources */,
 				706797E82A1A66EA002A7235 /* QuestViewController.swift in Sources */,
 				706797E62A1A66D4002A7235 /* IndexViewController.swift in Sources */,
+				70035FF02A30C7B400EB5164 /* QuestFolder.swift in Sources */,
 				706797CE2A19F1D1002A7235 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

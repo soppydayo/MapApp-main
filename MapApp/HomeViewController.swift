@@ -11,12 +11,12 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
-            guard let annotation = sender as? CustomMKPointAnnotation else { return }
+            guard let postData = sender as? PostData else { return }
             let next = segue.destination as! HalfModalViewController
-            next.annotation = annotation  // データを渡す
+            let annotation = CustomMKPointAnnotation(postData: postData)
+            next.annotation = annotation
             
             if let sheet = next.sheetPresentationController {
                 sheet.detents = [.medium()]
@@ -24,11 +24,10 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
                 sheet.preferredCornerRadius = 40.0
                 sheet.prefersGrabberVisible = true
             }
-            // ここでカスタムクラスに変換
-            guard view is CustomMKPointAnnotation else { return }
-            
         }
     }
+
+
     
     
     
@@ -185,9 +184,3 @@ class CustomMKPointAnnotation: MKPointAnnotation {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-
-
-
-
-
