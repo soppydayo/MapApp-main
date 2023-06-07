@@ -9,12 +9,31 @@ import UIKit
 import MapKit
 
 class HalfModalViewController: UIViewController{
+    
+    var str = ""
+    
     @IBOutlet var modalImage: UIImageView!
     @IBOutlet var modalTitle:  UILabel!
     @IBOutlet var modalText:  UILabel!
+    
+    
+    
+    
    
     
     
+}
+class CustomAnnotationView: MKAnnotationView {
+    let postData: PostData
+    
+    init(postData: PostData, annotation: MKAnnotation, reuseIdentifier: String?) {
+        self.postData = postData
+        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 

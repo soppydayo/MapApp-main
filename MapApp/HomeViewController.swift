@@ -14,7 +14,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
-            guard let postData = sender as? PostData else { return }
+            guard sender is PostData else { return }
             let next = segue.destination
             if let sheet = next.sheetPresentationController {
                 sheet.detents = [.medium()]
@@ -23,13 +23,11 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
                 sheet.prefersGrabberVisible = true
             }
             
-            let ViewController = UIViewController()
-                 ViewController.postData = postData
+            // ここでカスタムクラスに変換
+            guard view is CustomAnnotationView else { return }
+            
         }
-        // ここでカスタムクラスに変換
-           guard let annotation = view as? CustomAnnotationView else { return }
-           print(annotation.customProperty) // ここでカスタムプロパティを取得します。
-   
+
     }
     
     
@@ -140,52 +138,28 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
 }
 
 extension HomeViewController: MKMapViewDelegate {
-  // ピンがタップされた時
-  func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-    guard let customAnnotationView = view as? CustomAnnotationView else { return }
-    performSegue(withIdentifier: "toDetail", sender: customAnnotationView.postData)
-  }
-  func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-    if annotation is MKUserLocation {
-      // 現在位置のピンはデフォルトのビューを使用する
-      return nil
-    }
-    let identifier = "CustomAnnotation"
-    
-      let view = CustomAnnotationView(postData: , annotation: annotation, reuseIdentifier: identifier)
-    return view
-  }
-}
-
-
-
-class CustomAnnotationView: MKAnnotationView {
-    let postData: PostData
-    var title: String
-    var text: String
-    var date: Date
-    var imageData: Data?
-    var id: String
-    var latitude: Double
-    var longitude: Double
-    
-    init(postData: PostData, title: String, text: String, date: Date, imageData: Data?, id: String, latitude: Double, longitude: Double, annotation: MKAnnotation, reuseIdentifier: String?) {
+    // ピンがタップされた時
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            // 現在位置のピンはデフォルトのビューを使用する
+            return nil
+        }
+        let identifier = "CustomAnnotation"
         
-        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier) //スーパークラスのイニシャライザを呼び出す
-        self.postData = postData
-        self.title = title
-        self.text = text
-        self.date = date
-        self.imageData = imageData
-        self.id = id
-        self.latitude = latitude
-        self.longitude = longitude
-        
-        
-    }
-    
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        if let customAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? CustomAnnotationView {
+            customAnnotationView.annotation = annotation
+            return customAnnotationView
+        } else {
+            guard let postData = (annotation as? CustomAnnotationView)?.postData else {
+                return nil
+            }
+            let view = CustomAnnotationView(postData: postData, annotation: annotation, reuseIdentifier: identifier)
+            return view
+        }
     }
 }
+
+
+
+
+
