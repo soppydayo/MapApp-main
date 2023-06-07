@@ -14,19 +14,23 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
-            guard let postData = sender as? PostData else { return }
-            let next = segue.destination
+            guard let annotation = sender as? CustomMKPointAnnotation else { return }
+            let next = segue.destination as! HalfModalViewController
+           
+            
+            
             if let sheet = next.sheetPresentationController {
                 sheet.detents = [.medium(), .large()]
                 sheet.largestUndimmedDetentIdentifier = .medium
                 sheet.preferredCornerRadius = 40.0
                 sheet.prefersGrabberVisible = true
             }
-                // ここでカスタムクラスに変換
-                guard view is CustomMKPointAnnotation else { return }
-                
-            }
+            // ここでカスタムクラスに変換
+            guard view is CustomMKPointAnnotation else { return }
+            
         }
+    }
+    
     
     
     
@@ -128,6 +132,8 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: location.coordinate, span: span)
         mapView.setRegion(region, animated: true)
+        
+        
     }
     
     
@@ -136,11 +142,11 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
 }
 
 extension HomeViewController: MKMapViewDelegate {
-
+    
     
     
     // ピンのビューを作成
-    private func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKPointAnnotation? {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKPointAnnotation? {
         if annotation is MKUserLocation {
             // 現在位置のピンはデフォルトのビューを使用する
             return nil
@@ -154,7 +160,7 @@ extension HomeViewController: MKMapViewDelegate {
                 return nil
             }
             pointAnnotation = CustomMKPointAnnotation(postData: postData)
-        }        
+        }
         return pointAnnotation
     }
     
@@ -169,9 +175,9 @@ extension HomeViewController: MKMapViewDelegate {
 }
 
 class CustomMKPointAnnotation: MKPointAnnotation {
-    let postData: PostData
+    let postData: PostData?
     
-    init(postData: PostData) {
+    init(postData: PostData?) {
         self.postData = postData
         super.init()
     }

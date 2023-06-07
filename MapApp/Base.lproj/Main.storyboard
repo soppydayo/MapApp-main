@@ -40,7 +40,7 @@
                     <navigationItem key="navigationItem" id="IFq-OY-wZN"/>
                     <connections>
                         <outlet property="modalImage" destination="OEa-ik-ZT1" id="oN6-v5-nbC"/>
-                        <outlet property="modalText" destination="oSQ-fJ-lgo" id="JuG-90-Gyj"/>
+                        <outlet property="modalTitle" destination="oSQ-fJ-lgo" id="Pu3-aK-O4I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8QJ-5P-sDG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
