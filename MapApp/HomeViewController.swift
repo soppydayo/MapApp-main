@@ -14,21 +14,19 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
-            guard sender is PostData else { return }
+            guard let postData = sender as? PostData else { return }
             let next = segue.destination
             if let sheet = next.sheetPresentationController {
-                sheet.detents = [.medium()]
+                sheet.detents = [.medium(), .large()]
                 sheet.largestUndimmedDetentIdentifier = .medium
                 sheet.preferredCornerRadius = 40.0
                 sheet.prefersGrabberVisible = true
             }
-            
-            // ここでカスタムクラスに変換
-            guard view is CustomAnnotationView else { return }
-            
+                // ここでカスタムクラスに変換
+                guard view is CustomAnnotationView else { return }
+                
+            }
         }
-
-    }
     
     
     
@@ -138,24 +136,38 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
 }
 
 extension HomeViewController: MKMapViewDelegate {
-    // ピンがタップされた時
+
+    
+    
+    // ピンのビューを作成
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
             // 現在位置のピンはデフォルトのビューを使用する
             return nil
         }
-        let identifier = "CustomAnnotation"
         
-        if let customAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? CustomAnnotationView {
-            customAnnotationView.annotation = annotation
-            return customAnnotationView
-        } else {
+        let identifier = "CustomAnnotation"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? CustomAnnotationView
+        
+        if annotationView == nil {
             guard let postData = (annotation as? CustomAnnotationView)?.postData else {
                 return nil
             }
-            let view = CustomAnnotationView(postData: postData, annotation: annotation, reuseIdentifier: identifier)
-            return view
+            annotationView = CustomAnnotationView(postData: postData, annotation: annotation, reuseIdentifier: identifier)
+        } else {
+            annotationView?.annotation = annotation
         }
+        
+        return annotationView
+    }
+    
+    
+    // ピンがタップされた時
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let customAnnotationView = view as? CustomAnnotationView else {
+            return
+        }
+        performSegue(withIdentifier: "toDetail", sender: customAnnotationView.postData)
     }
 }
 
