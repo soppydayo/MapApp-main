@@ -23,18 +23,6 @@ class HalfModalViewController: UIViewController{
     
     
 }
-class CustomAnnotationView: MKAnnotationView {
-    let postData: PostData
-    
-    init(postData: PostData, annotation: MKAnnotation, reuseIdentifier: String?) {
-        self.postData = postData
-        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
 
 
     

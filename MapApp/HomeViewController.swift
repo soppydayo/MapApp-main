@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
                 sheet.prefersGrabberVisible = true
             }
                 // ここでカスタムクラスに変換
-                guard view is CustomAnnotationView else { return }
+                guard view is CustomMKPointAnnotation else { return }
                 
             }
         }
@@ -61,7 +61,7 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
         let items = realm.objects(PostData.self)
         
         for item in items {
-            let annotation = MKPointAnnotation()
+            let annotation = CustomMKPointAnnotation(postData: item)
             annotation.coordinate = CLLocationCoordinate2D(latitude: item.latitude, longitude: item.longitude)
             mapView.addAnnotation(annotation)
         }
@@ -140,36 +140,47 @@ extension HomeViewController: MKMapViewDelegate {
     
     
     // ピンのビューを作成
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    private func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKPointAnnotation? {
         if annotation is MKUserLocation {
             // 現在位置のピンはデフォルトのビューを使用する
             return nil
         }
         
         let identifier = "CustomAnnotation"
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? CustomAnnotationView
+        var pointAnnotation = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? CustomMKPointAnnotation
         
-        if annotationView == nil {
-            guard let postData = (annotation as? CustomAnnotationView)?.postData else {
+        if pointAnnotation == nil {
+            guard let postData = (annotation as? CustomMKPointAnnotation)?.postData else {
                 return nil
             }
-            annotationView = CustomAnnotationView(postData: postData, annotation: annotation, reuseIdentifier: identifier)
-        } else {
-            annotationView?.annotation = annotation
-        }
-        
-        return annotationView
+            pointAnnotation = CustomMKPointAnnotation(postData: postData)
+        }        
+        return pointAnnotation
     }
     
     
     // ピンがタップされた時
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        guard let customAnnotationView = view as? CustomAnnotationView else {
+        guard let annotation = view.annotation as? CustomMKPointAnnotation else {
             return
         }
-        performSegue(withIdentifier: "toDetail", sender: customAnnotationView.postData)
+        performSegue(withIdentifier: "toDetail", sender: annotation.postData)
     }
 }
+
+class CustomMKPointAnnotation: MKPointAnnotation {
+    let postData: PostData
+    
+    init(postData: PostData) {
+        self.postData = postData
+        super.init()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 
 
 
