@@ -14,27 +14,25 @@ class ItemTableViewCell: UITableViewCell {
     @IBOutlet var postImageView: UIImageView!
     @IBOutlet var longitudeLabel: UILabel!
     @IBOutlet var idLabel: UILabel!
+    @IBOutlet var View: UIView!
     
-    
-    
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
 
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
+    
     
     func setCell(title: String, date: String, image: UIImage?) {
         titleLabel.text = title
         dateLabel.text = date
         postImageView.image = image
     }
+    
+
     
     // Padding for cell
         func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

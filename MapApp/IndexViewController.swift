@@ -8,20 +8,22 @@
 import UIKit
 import RealmSwift
 
-class IndexViewController: UIViewController, UITableViewDataSource {
+class IndexViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     
     @IBOutlet var tableView: UITableView!
     
     let realm = try! Realm()
     var items: [PostData] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
         items = readItems()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -29,8 +31,8 @@ class IndexViewController: UIViewController, UITableViewDataSource {
         items = readItems()
         tableView.reloadData()
         
-        tableView.rowHeight = 113
-
+        tableView.rowHeight = 146
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,21 +50,38 @@ class IndexViewController: UIViewController, UITableViewDataSource {
         } else {
             cell.setCell(title: item.title, date: dateString, image: nil)
         }
+        cell.View.layer.cornerRadius = 8
+        cell.View.layer.masksToBounds = true
+        
         return cell
     }
-
+    
+    
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10  // セル間の垂直方向の間隔を指定します
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = .clear
+        return headerView
+    }
+    
+    
+    
     
     func readItems() -> [PostData] {
         return Array(realm.objects(PostData.self))
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
 }

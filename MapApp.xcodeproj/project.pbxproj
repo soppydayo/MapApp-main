@@ -393,6 +393,7 @@
 				DEVELOPMENT_TEAM = GG7MDJCQ59;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MapApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SpotSnap;
 				INFOPLIST_KEY_NSCameraUsageDescription = "アプリ内で編集する写真を撮るためにカメラを起動します";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "このアプリは位置情報を取得します";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "このアプリは位置情報を取得します";
@@ -426,6 +427,7 @@
 				DEVELOPMENT_TEAM = GG7MDJCQ59;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MapApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SpotSnap;
 				INFOPLIST_KEY_NSCameraUsageDescription = "アプリ内で編集する写真を撮るためにカメラを起動します";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "このアプリは位置情報を取得します";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "このアプリは位置情報を取得します";

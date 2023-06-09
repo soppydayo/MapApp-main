@@ -21,7 +21,7 @@ class presentPickerViewController: UIViewController, UINavigationControllerDeleg
     let realm = try! Realm()
     var postData: PostData?
     
-    let defaultImage = UIImage(named: "defaultImage")
+    let defaultImage = UIImage(named: "78791")
 
     
     override func viewDidLoad() {
