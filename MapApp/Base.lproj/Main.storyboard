@@ -229,7 +229,7 @@
                                     </textAttributes>
                                 </navigationBarAppearance>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="78791" translatesAutoresizingMaskIntoConstraints="NO" id="MWb-bn-Kqs">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="MWb-bn-Kqs">
                                 <rect key="frame" x="37" y="118" width="319" height="466"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="本文を入力..." borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="nZB-IL-VbG">
@@ -320,8 +320,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="78791" width="960" height="1706"/>
         <image name="camera" catalog="system" width="128" height="93"/>
+        <image name="defaultImage" width="1144" height="1651"/>
         <image name="folder" catalog="system" width="128" height="96"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="list.bullet.clipboard" catalog="system" width="103" height="128"/>
