@@ -29,17 +29,17 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="332" translatesAutoresizingMaskIntoConstraints="NO" id="QCA-7d-yD7">
-                                <rect key="frame" x="35" y="229" width="324" height="116"/>
+                                <rect key="frame" x="35" y="229" width="323" height="133"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="QCA-7d-yD7" secondAttribute="height" multiplier="23:6" constant="-120.66666666666669" id="fa6-4W-6vS"/>
+                                    <constraint firstAttribute="height" constant="133" id="FKJ-Sk-eDP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <color key="textColor" red="0.28627452250000002" green="0.38823530080000002" blue="0.29803922770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSQ-fJ-lgo">
-                                <rect key="frame" x="37" y="194" width="340" height="27"/>
+                                <rect key="frame" x="37" y="194" width="339" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oSQ-fJ-lgo" secondAttribute="height" multiplier="340:27" id="1bA-vG-bYX"/>
                                 </constraints>
@@ -59,9 +59,9 @@
                             <constraint firstItem="oSQ-fJ-lgo" firstAttribute="top" secondItem="OEa-ik-ZT1" secondAttribute="bottom" constant="12" id="R1q-xC-rSV"/>
                             <constraint firstItem="OEa-ik-ZT1" firstAttribute="top" secondItem="pSA-c0-Hmv" secondAttribute="top" id="YoY-dt-A6F"/>
                             <constraint firstItem="QCA-7d-yD7" firstAttribute="leading" secondItem="pSA-c0-Hmv" secondAttribute="leading" constant="35" id="ZrN-op-kDr"/>
-                            <constraint firstItem="QCA-7d-yD7" firstAttribute="top" secondItem="oSQ-fJ-lgo" secondAttribute="bottom" constant="8" symbolic="YES" id="qPh-Qc-8s7"/>
                             <constraint firstItem="OEa-ik-ZT1" firstAttribute="leading" secondItem="pSA-c0-Hmv" secondAttribute="leading" id="sEB-pC-kOZ"/>
                             <constraint firstItem="oSQ-fJ-lgo" firstAttribute="top" secondItem="OEa-ik-ZT1" secondAttribute="bottom" constant="12" id="wQ1-cK-yHW"/>
+                            <constraint firstItem="pSA-c0-Hmv" firstAttribute="trailing" secondItem="QCA-7d-yD7" secondAttribute="trailing" constant="35" id="ynU-hk-7MS"/>
                         </constraints>
                     </view>
                     <connections>

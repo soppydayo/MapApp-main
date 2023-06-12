@@ -44,6 +44,9 @@ class presentPickerViewController: UIViewController, UINavigationControllerDeleg
         TitleText.text = ""
         HonbunText.text = ""
         
+        photoImageView.layer.cornerRadius = 10
+        
+        
         
         
     }
