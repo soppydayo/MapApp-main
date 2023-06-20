@@ -22,7 +22,6 @@ class QuestViewController: UIViewController, UIAdaptivePresentationControllerDel
         questLabel3.roundCorners(cornerRadius: 10)
         questLabel4.roundCorners(cornerRadius: 10)
         
-        //ChallemgeExampleをランダム表示
         setupQuestLabels()
     }
     
@@ -41,7 +40,6 @@ class QuestViewController: UIViewController, UIAdaptivePresentationControllerDel
     }
     
     func displayRandomQuest() {
-        //別ファイルで定義した配列を取得
         var shuffledList = questList
         shuffledList.shuffle()
         
@@ -52,7 +50,6 @@ class QuestViewController: UIViewController, UIAdaptivePresentationControllerDel
                 label?.transform = CGAffineTransform(scaleX: 0.98, y: 0.98)
             }
         }) { _ in
-            //UILabelにシャッフルした配列を順に入れる
             for (index, label) in QuestLabels.enumerated() {
                 label?.text = shuffledList[index]
                 UIView.animate(withDuration: 0.1, animations: {
