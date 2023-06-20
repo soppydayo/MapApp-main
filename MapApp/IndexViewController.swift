@@ -53,6 +53,7 @@ class IndexViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.View.layer.cornerRadius = 8
         cell.View.layer.masksToBounds = true
         
+        
         return cell
     }
     

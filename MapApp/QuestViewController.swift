@@ -17,32 +17,53 @@ class QuestViewController: UIViewController, UIAdaptivePresentationControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        questLabel1.roundCorners(cornerRadius: 10)
+        questLabel2.roundCorners(cornerRadius: 10)
+        questLabel3.roundCorners(cornerRadius: 10)
+        questLabel4.roundCorners(cornerRadius: 10)
+        
+        //ChallemgeExampleをランダム表示
+        setupQuestLabels()
     }
     
-    //    func setupExampleLabels() {
+    func setupQuestLabels() {
+        
+        let QuestLabels = [questLabel1, questLabel2, questLabel3, questLabel4]
+        
+        for label in QuestLabels {
+            
+            label?.layer.cornerRadius = 8.0
+            label?.clipsToBounds = true
+        }
+        
+        displayRandomQuest()
+        
+    }
     
-    //        let questLabels = [questLabel1, questLabel2, questLabel3, questLabel4]
-    
-    //        for label in questLabels {
-    
-    //    label?.layer.cornerRadius = 5.0
-    //       label?.clipsToBounds = true
+    func displayRandomQuest() {
+        //別ファイルで定義した配列を取得
+        var shuffledList = questList
+        shuffledList.shuffle()
+        
+        let QuestLabels = [questLabel1, questLabel2, questLabel3, questLabel4]
+        
+        UIView.animate(withDuration: 0.1, animations: {
+            for (_, label) in QuestLabels.enumerated() {
+                label?.transform = CGAffineTransform(scaleX: 0.98, y: 0.98)
+            }
+        }) { _ in
+            //UILabelにシャッフルした配列を順に入れる
+            for (index, label) in QuestLabels.enumerated() {
+                label?.text = shuffledList[index]
+                UIView.animate(withDuration: 0.1, animations: {
+                    label?.transform = CGAffineTransform.identity
+                })
+            }
+        }
+    }
 }
+    
 
-//       func displayRandomExample() {
-//別ファイルで定義した配列を取得
-//          var shuffledQuest =  QuestFolder()
-//         shuffledQuest.shuffle()
-
-
-//         for (index, label) in questLabels.enumerated() {
-//            label?.text = shuffledQuest[index]
-//        UIView.animate(withDuration: 0.1, animations: {
-//           label?.transform = CGAffineTransform.identity
-//               })
-//           }
-//       }
 
 
 
