@@ -357,6 +357,9 @@
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" red="0.28627452250000002" green="0.38823530080000002" blue="0.29803922770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="shuffleButtonTapped" destination="7x0-gp-d7P" eventType="touchUpInside" id="PAf-yk-NHd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTq-C1-K3h">
                                 <rect key="frame" x="302" y="479" width="60" height="60"/>
